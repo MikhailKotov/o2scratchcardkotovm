@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D71F14E02EB8BFEF0020F5FE /* CoreDomain in Frameworks */ = {isa = PBXBuildFile; productRef = D71F14DF2EB8BFEF0020F5FE /* CoreDomain */; };
+		D71F14E22EB8BFEF0020F5FE /* DataLayer in Frameworks */ = {isa = PBXBuildFile; productRef = D71F14E12EB8BFEF0020F5FE /* DataLayer */; };
+		D71F14E42EB8BFEF0020F5FE /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = D71F14E32EB8BFEF0020F5FE /* DesignSystem */; };
+		D71F14E62EB8BFEF0020F5FE /* FeatureActivation in Frameworks */ = {isa = PBXBuildFile; productRef = D71F14E52EB8BFEF0020F5FE /* FeatureActivation */; };
+		D71F14E82EB8BFEF0020F5FE /* FeatureMain in Frameworks */ = {isa = PBXBuildFile; productRef = D71F14E72EB8BFEF0020F5FE /* FeatureMain */; };
+		D71F14EA2EB8BFEF0020F5FE /* FeatureScratch in Frameworks */ = {isa = PBXBuildFile; productRef = D71F14E92EB8BFEF0020F5FE /* FeatureScratch */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D71F14B52EB6A65A0020F5FE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +61,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D71F14EA2EB8BFEF0020F5FE /* FeatureScratch in Frameworks */,
+				D71F14E42EB8BFEF0020F5FE /* DesignSystem in Frameworks */,
+				D71F14E22EB8BFEF0020F5FE /* DataLayer in Frameworks */,
+				D71F14E02EB8BFEF0020F5FE /* CoreDomain in Frameworks */,
+				D71F14E82EB8BFEF0020F5FE /* FeatureMain in Frameworks */,
+				D71F14E62EB8BFEF0020F5FE /* FeatureActivation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +93,7 @@
 				D71F14A92EB6A6580020F5FE /* o2scratchcardkotovm */,
 				D71F14B72EB6A65A0020F5FE /* o2scratchcardkotovmTests */,
 				D71F14C12EB6A65A0020F5FE /* o2scratchcardkotovmUITests */,
+				D71F14DE2EB8BFEF0020F5FE /* Frameworks */,
 				D71F14A82EB6A6580020F5FE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +106,13 @@
 				D71F14BE2EB6A65A0020F5FE /* o2scratchcardkotovmUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D71F14DE2EB8BFEF0020F5FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +135,12 @@
 			);
 			name = o2scratchcardkotovm;
 			packageProductDependencies = (
+				D71F14DF2EB8BFEF0020F5FE /* CoreDomain */,
+				D71F14E12EB8BFEF0020F5FE /* DataLayer */,
+				D71F14E32EB8BFEF0020F5FE /* DesignSystem */,
+				D71F14E52EB8BFEF0020F5FE /* FeatureActivation */,
+				D71F14E72EB8BFEF0020F5FE /* FeatureMain */,
+				D71F14E92EB8BFEF0020F5FE /* FeatureScratch */,
 			);
 			productName = o2scratchcardkotovm;
 			productReference = D71F14A72EB6A6580020F5FE /* o2scratchcardkotovm.app */;
@@ -195,6 +224,9 @@
 			);
 			mainGroup = D71F149E2EB6A6580020F5FE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D71F14D12EB8B0340020F5FE /* XCLocalSwiftPackageReference "ScratchCardKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D71F14A82EB6A6580020F5FE /* Products */;
 			projectDirPath = "";
@@ -578,6 +610,46 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		D71F14D12EB8B0340020F5FE /* XCLocalSwiftPackageReference "ScratchCardKit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ScratchCardKit;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D71F14DF2EB8BFEF0020F5FE /* CoreDomain */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D71F14D12EB8B0340020F5FE /* XCLocalSwiftPackageReference "ScratchCardKit" */;
+			productName = CoreDomain;
+		};
+		D71F14E12EB8BFEF0020F5FE /* DataLayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D71F14D12EB8B0340020F5FE /* XCLocalSwiftPackageReference "ScratchCardKit" */;
+			productName = DataLayer;
+		};
+		D71F14E32EB8BFEF0020F5FE /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D71F14D12EB8B0340020F5FE /* XCLocalSwiftPackageReference "ScratchCardKit" */;
+			productName = DesignSystem;
+		};
+		D71F14E52EB8BFEF0020F5FE /* FeatureActivation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D71F14D12EB8B0340020F5FE /* XCLocalSwiftPackageReference "ScratchCardKit" */;
+			productName = FeatureActivation;
+		};
+		D71F14E72EB8BFEF0020F5FE /* FeatureMain */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D71F14D12EB8B0340020F5FE /* XCLocalSwiftPackageReference "ScratchCardKit" */;
+			productName = FeatureMain;
+		};
+		D71F14E92EB8BFEF0020F5FE /* FeatureScratch */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D71F14D12EB8B0340020F5FE /* XCLocalSwiftPackageReference "ScratchCardKit" */;
+			productName = FeatureScratch;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D71F149F2EB6A6580020F5FE /* Project object */;
 }

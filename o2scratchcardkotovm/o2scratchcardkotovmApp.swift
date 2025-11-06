@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import FeatureMain
+
+import DesignSystem
 
 @main
 struct o2scratchcardkotovmApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+//      RootView()
+//        .appGradientBackground()
+      MorphingButtonToDetail()
+        .appGradientBackground()
     }
+  }
 }
