@@ -17,7 +17,7 @@ public enum O2Color {
 
 extension Color {
   init(hex: String) {
-    var str = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+    let str = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
     var int: UInt64 = 0; Scanner(string: str).scanHexInt64(&int)
     // swiftlint:disable identifier_name
     let a, r, g, b: UInt64
