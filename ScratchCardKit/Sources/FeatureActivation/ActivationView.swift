@@ -34,11 +34,9 @@ public struct ActivationView: View {
           .buttonStyle(PrimaryButtonStyle())
           .disabled(viewModel.isActivating)
       }
-//      .padding()
       .alert("Activation failed", isPresented: $viewModel.showError) {
         Button("OK", role: .cancel) {}
       } message: { Text("We couldn't activate your card. Please try again.") }
-      //    .appGradientBackground()
     }
     .padding()
   }

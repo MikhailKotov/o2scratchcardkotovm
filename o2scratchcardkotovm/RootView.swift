@@ -14,47 +14,6 @@ import FeatureMain
 import FeatureScratch
 
 struct RootView: View {
-  private let container = AppContainer()
-
-  @State private var path: [Route] = []
-
-  var body: some View {
-    NavigationStack(path: $path) {
-      MainView(
-        viewModel: MainViewModel(observe: container.observe),
-        onScratch: { path.append(.scratch) },
-        onActivate: { path.append(.activate) }
-      )
-      .navigationDestination(for: Route.self) { route in
-        switch route {
-        case .scratch:
-          ScratchView(
-            viewModel: ScratchViewModel(getCodeUseCase: container.generate),
-            onBack: {
-              print("fffff")
-            })
-        case .activate:
-          ActivationView(
-            viewModel: ActivationViewModel(activateCardUseCase: container.activate),
-            onBack: {
-              print("fffff")
-            })
-        }
-      }
-    }
-    .backgroundStyle(.clear)
-    .appGradientBackground()
-  }
-
-  private enum Route: Hashable {
-    case scratch
-    case activate
-  }
-}
-
-//import SwiftUI
-
-struct MorphingButtonToDetail: View {
 
   private enum Route: Hashable {
     case main
@@ -110,7 +69,6 @@ struct MorphingButtonToDetail: View {
 
 
 #Preview {
-//  RootView()
-  MorphingButtonToDetail()
+  RootView()
     .appGradientBackground()
 }

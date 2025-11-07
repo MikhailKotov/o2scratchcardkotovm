@@ -14,9 +14,7 @@ import DesignSystem
 struct o2scratchcardkotovmApp: App {
   var body: some Scene {
     WindowGroup {
-//      RootView()
-//        .appGradientBackground()
-      MorphingButtonToDetail()
+      RootView()
         .appGradientBackground()
     }
   }

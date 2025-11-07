@@ -9,7 +9,6 @@
 import SwiftUI
 
 public enum O2Color {
-  // ВСТАВЬ СВОИ HEX из брендгайда O2
   public static let primaryBlue   = Color(hex: "#0112AA")
   public static let secondaryBlue = Color(hex: "#E5F2FA")
   public static let accentPink    = Color(hex: "#841C59")

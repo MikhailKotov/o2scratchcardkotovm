@@ -42,7 +42,6 @@ public final class ScratchCardRepositoryImpl: ScratchCardRepository, @unchecked 
       _state = new
       return continuations
     }
-    // вызывать yield вне lock — чтобы не держать мьютекс на пользовательском коде
     listeners.forEach { $0.yield(new) }
   }
 }
