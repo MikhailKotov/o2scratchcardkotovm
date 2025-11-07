@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "D88326BF-0571-416C-A4DC-0C9A1D8ED18A",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "performanceAntipatternCheckerEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "CoreDomainTests",
+        "name" : "CoreDomainTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "DataLayerTests",
+        "name" : "DataLayerTests"
+      }
+    }
+  ],
+  "version" : 1
+}

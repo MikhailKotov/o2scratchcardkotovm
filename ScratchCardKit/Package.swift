@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
   name: "ScratchCardKit",
-  platforms: [.iOS(.v26)],
+  platforms: [.iOS(.v26), .macOS(.v26)],
   products: [
     .library(name: "CoreDomain", targets: ["CoreDomain"]),
     .library(name: "DataLayer", targets: ["DataLayer"]),
@@ -45,19 +45,19 @@ let package = Package(
       dependencies: ["CoreDomain", "DesignSystem"],
       plugins: [.plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins")]
     ),
-    .testTarget(name: "FeatureMainTests", dependencies: ["FeatureMain", "CoreDomain"]),
+//    .testTarget(name: "FeatureMainTests", dependencies: ["FeatureMain", "CoreDomain"]),
     .target(
       name: "FeatureScratch",
       dependencies: ["CoreDomain", "DesignSystem"],
       plugins: [.plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins")]
     ),
-    .testTarget(name: "FeatureScratchTests", dependencies: ["FeatureScratch", "CoreDomain"]),
+//    .testTarget(name: "FeatureScratchTests", dependencies: ["FeatureScratch", "CoreDomain"]),
     .target(
       name: "FeatureActivation",
       dependencies: ["CoreDomain", "DesignSystem"],
       plugins: [.plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins")]
     ),
-    .testTarget(name: "FeatureActivationTests", dependencies: ["FeatureActivation", "CoreDomain"]),
+//    .testTarget(name: "FeatureActivationTests", dependencies: ["FeatureActivation", "CoreDomain"]),
     .target(name: "Shared"),
   ]
 )

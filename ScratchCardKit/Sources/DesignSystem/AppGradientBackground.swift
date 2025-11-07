@@ -21,7 +21,7 @@ struct AppGradientBackground: ViewModifier {
 }
 
 public extension View {
-  public func appGradientBackground() -> some View {
+  func appGradientBackground() -> some View {
     modifier(AppGradientBackground())
   }
 }
