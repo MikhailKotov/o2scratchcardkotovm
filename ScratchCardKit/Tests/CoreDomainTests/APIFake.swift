@@ -7,9 +7,17 @@
 
 @testable import CoreDomain
 
-struct APIFake: API {
-  let version: String
-  func fetchIOSVersion(for code: String) async throws -> String {
-    version
-  }
+final class APIFake: API, @unchecked Sendable {
+    let version: String?
+    let error: Error?
+    private(set) var callCount = 0
+
+    init(version: String) { self.version = version; self.error = nil }
+    init(error: Error) { self.version = nil; self.error = error }
+
+    func fetchIOSVersion(for code: String) async throws -> String {
+        callCount += 1
+        if let e = error { throw e }
+        return version ?? ""
+    }
 }
