@@ -5,7 +5,6 @@
 //  Created by Mykhailo Kotov on 06/11/2025.
 //
 
-
 import SwiftUI
 
 public enum O2Color {

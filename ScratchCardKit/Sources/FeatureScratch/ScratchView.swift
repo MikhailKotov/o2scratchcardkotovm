@@ -28,18 +28,21 @@ public struct ScratchView: View {
               .glassEffect()
           }
           .frame(maxWidth: .infinity, alignment: .leading)
-          Text(viewModel.isScratching ? "Scratching…" : "Ready to scratch")
+          Text(viewModel.state.toText)
         }
-        Button(viewModel.isScratching ? "Working…" : "Scratch now") { viewModel.scratch() }
+        Button(viewModel.state.toButton) { viewModel.scratch() }
           .buttonStyle(PrimaryButtonStyle())
-          .disabled(viewModel.isScratching)
+          .disabled(!viewModel.state.toButtonEnable)
           .accessibilityHint("Operation can be cancelled by leaving the screen.")
       }
-//      .padding()
       .onDisappear { viewModel.onDisappear() }
-      .sensoryFeedback(.success, trigger: !viewModel.isScratching)
+      .sensoryFeedback(.success, trigger: viewModel.state.toButtonDone)
+      .onChange(of: viewModel.state) { _, newValue in
+        if newValue == .scratched {
+          onBack()
+        }
+      }
     }
     .padding()
-//    .appGradientBackground()
   }
 }

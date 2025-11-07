@@ -27,7 +27,7 @@ public struct MainView: View {
   public var body: some View {
     GlassCard {
       VStack(spacing: 16) {
-        Text(viewModel.statusText).font(.title2).multilineTextAlignment(.center)
+        Text(viewModel.statusText).font(.title3).multilineTextAlignment(.center)
         Button("Scratch card", action: onScratch)
           .buttonStyle(PrimaryButtonStyle())
           .accessibilityLabel("Scratch the card. Takes about two seconds.")
